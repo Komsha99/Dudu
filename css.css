@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li, a, button {
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+.logo {
+    cursor: pointer;
+    width: 30px;
+}
+.nav-links {
+    list-style: none;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav-links li a:hover {
+    color: #00dab1ff;
+}
+button {
+    padding: 9px 25px;
+    background-color: #00dab1ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover {
+    background-color: rgb(0, 133, 108);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.hero {
+    background-color: #2b3840ff;
+    height: 100vh;
+}
+.asd {
+    height: 1000px;
+}
+.front {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}  
+.front h1 {
+    
+}
