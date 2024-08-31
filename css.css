@@ -4,7 +4,7 @@
     padding: 0;
 }
 li, a, button {
-    font-size: 16px;
+    font-size: 20px;
     color: #edf0f1;
     text-decoration: none;
 }
@@ -14,6 +14,7 @@ li, a, button {
 }
 .nav-links {
     list-style: none;
+    margin-left: 77px;
 }
 .nav-links li {
     display: inline-block;
@@ -41,47 +42,91 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
     position: fixed;
     width: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
     font-weight: bold;
 }
 .hero {
     background-color: #2b3840ff;
     height: 100vh;
-}
-.asd {
-    height: 1000px;
-}
-.front {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
-}  
-.front h1 {
     font-size: 100px;
-    margin-bottom: 30px;
     font-weight: bold;
+    gap: 40px;
+    text-align: center;
 }
-.front p {
+.hero p {
     font-size: 40px;
-    margin-bottom: 50px;
 }
-.front button {
-    padding: 15px 40px;
-    font-size: 40px;
+.hero button {
+    padding: 10px 40px;
+    font-size: 30px;
+    margin-bottom: 180px;
 }
 .images {
     position: absolute;
-    z-index: 1000;
-    bottom: -25px;
+    overflow: hidden;
+    height: 400px;
     width: 100%;
+    bottom: -20px;
 }
-.services {
+.stuff {
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    bottom: -232px;
+    left: 50%;
+    z-index: 1;
+}
+.container {
+    text-align: center;
+}
+.container h2 {
+    margin: 100px 0 25px 0;
+    font-size: 80px;
+}
+.container p {
+    font-size: 30px;
+    margin: 25px 0 100px 0;
+}
+.services div {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(0, 255, 0);
+}
+.scrible {
+    width: 100%;
+    height: 400px;
+    background-color: #2b3840ff;
     display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+.scrible img {
+    width: 200px;
+}
+.zaslikekurac {
+    height: 500px;
+    width: 100%;
+    background-color: rgb(0, 255, 0);
+}
+.form {
+    height: 1000px;
+    width: 100%;
+    background-color: #2b3840ff;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #2b3840ff;
+    border-top: 2px solid black;
 }
