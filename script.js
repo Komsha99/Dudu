@@ -1,3 +1,26 @@
+const header = document.querySelector('header');
+const hero = document.querySelector('.hero');
+
+const options = {
+    root: null, 
+    threshold: 0.1, 
+  };
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            header.classList.remove('changeColor');
+
+        } else {
+            header.classList.add('changeColor');
+        }
+    })
+}, options);
+
+observer.observe(hero);
+
+
+
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
@@ -55,3 +78,6 @@ carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop)
 carousel.addEventListener("scroll", infiniteScroll);
+
+
+

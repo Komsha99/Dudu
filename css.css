@@ -22,7 +22,7 @@ li, a, button {
 }
 
 .nav-links li a {
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 .nav-links li a:hover {
     color: #00dab1ff;
@@ -48,6 +48,101 @@ header{
     z-index: 3;
     background-color: rgba(0, 0, 0, 0.4);
     font-weight: bold;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+.changeColor {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.changeColor a {
+    color: #000;
+}
+
+.changeColor a:hover {
+    color: #ffe1e1;
+}
+
+.changeColor button {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.changeColor button:hover {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.images {
+    position: absolute;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    bottom: -20px;
+}
+.stuff {
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+    bottom: -232px;
+    left: 50%;
+    z-index: 1;
+}
+.container {
+    text-align: center;
+}
+.text h2 {
+    margin: 100px 0 25px 0;
+    font-size: 80px;
+}
+.text p {
+    font-size: 30px;
+    margin: 25px 0 100px 0;
+}
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+.services-card {
+    width: 350px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    height: 500px; 
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    overflow: hidden;
+}
+
+.services-card::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 0; 
+    height: 100%; 
+    background-color: #2b3840ff; 
+    transition: width 0.6s ease; 
+    z-index: 1; 
+}
+
+.services-card:hover::before {
+    width: 100%; 
+}
+
+.services-card:hover {
+    transform: translateY(-20px);
+    background-color: #2b3840ff;
+    border-color: #2b3840ff; 
+    color: #fff; 
+    z-index: 2;
+}
+
+.services-card * {
+    position: relative; 
+    z-index: 2; 
 }
 .hero {
     background-color: #2b3840ff;
@@ -186,7 +281,7 @@ footer {
     padding-bottom: 15px;
 }
 .carousel.no-transition {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
 }
 .carousel.dragging {
     scroll-snap-type: none;
@@ -237,7 +332,7 @@ footer {
     scrollbar-width: 0;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1248px) {
     .services {
         flex-direction: column;
         align-items: center;
