@@ -21,10 +21,12 @@ observer.observe(hero);
 
 
 
+
 let carousel = document.querySelector(".carousel");
 let btns = document.querySelectorAll(".wrapper i");
 let carouselChildren = [...carousel.children];
 let wrapper = document.querySelector(".wrapper");
+
 
 
 let cardWidth = carousel.querySelector(".card").offsetWidth;
@@ -36,6 +38,7 @@ let isDragging = false,
 
 
 let cardsPerView = Math.round(carousel.offsetWidth / cardWidth);
+
 
 carouselChildren
   .slice(-cardsPerView)
@@ -65,8 +68,8 @@ let dragStart = (e) => {
 };
 
 let dragging = (e) => {
-
   if (!isDragging) return;
+  e.preventDefault();
 
   carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
 };
@@ -76,6 +79,7 @@ let dragStop = () => {
 
   carousel.classList.remove("dragging");
 };
+
 
 let infiniteScroll = () => {
   if (carousel.scrollLeft === 0) {
@@ -90,9 +94,25 @@ let infiniteScroll = () => {
     carousel.scrollLeft = carousel.offsetWidth;
     carousel.classList.remove("no-transition");
   }
+  clearTimeout(timeoutId);
+  if (!wrapper.matches(":hover")) autoPlay();
 };
+
+let autoPlay = () => {
+   
+    if (window.innerWidth < 800 || !isAutoPlay) return; 
+  
+    timeoutId = setTimeout(() => {
+      carousel.scrollLeft += cardWidth;
+    }, 2500);
+  };
+  
+  autoPlay();
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
+
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
