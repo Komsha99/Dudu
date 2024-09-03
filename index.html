@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <link rel="stylesheet" href="css.css">
     <link rel="icon" type="image/x-icon" href="/icons/slack-brands-solid.svg">
     <script src="script.js" defer></script>
-    
 </head>
 <body>
     <header>
@@ -67,7 +65,8 @@
             <img src="/icons/slack-brands-solid.svg" alt="aaaaa">
         </div>
     </div>
-    <div class="zaslikekurac">
+        <h3 class="h3pic">Dudu pupu pipi kik</h3>
+    <div class="piccontainer">
         <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
             <ul class="carousel">
@@ -94,12 +93,27 @@
         </div>
     </div>
     <div class="form">
-        
+        <div class="formelement">
+            <form action="">
+                <h4>Kontaktirajte nas</h4>
+                <input type="text" name="firstname" placeholder="Ime" class="contact-inputs" required><br>
+                <input type="text" name="lastname" placeholder="Prezime" class="contact-inputs" required><br>
+                <input type="email" name="email" placeholder="E-mail" class="contact-inputs" required><br>
+                <select name="type" class="contact-inputs" required>
+                    <option value="" disabled selected>Odaberi opciju</option>
+                    <option value="1">1asdasdasd</option>
+                    <option value="2">2asdasdasd</option>
+                    <option value="3">3asdasdasd</option>
+                </select><br>
+                <textarea name="message" placeholder="Dodatne informacije" required></textarea><br>
+                <button class="formbutton" type="submit">Prosledi</button>
+            </form>
+        </div>
     </div>
     <footer>
 
     </footer>
-    
 
+    
 </body>
 </html>

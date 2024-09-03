@@ -1,5 +1,4 @@
 * {
-    list-style: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -46,7 +45,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 3;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.97);
     font-weight: bold;
     transition: background-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -57,7 +56,7 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #fff;
     font-size: 100px;
     font-weight: bold;
     gap: 40px;
@@ -72,7 +71,7 @@ header{
     margin-bottom: 180px;
 }
 .changeColor {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255, 0.97);
     box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
 }
 .changeColor a {
@@ -82,7 +81,6 @@ header{
     color: #ffe1e1;
 }
 .changeColor button {
-    border: 1px solid #000;
     color: #000;
 }
 .changeColor button:hover {
@@ -117,12 +115,12 @@ header{
 .services {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 10px;
     margin-top: 30px;
 }
 .services-card {
     width: 350px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     padding: 20px;
     margin: 20px;
     height: 500px; 
@@ -175,52 +173,36 @@ header{
     background-color: #2b3840ff;
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 200px;
     align-items: center;
     font-size: 30px;
-    color: white;
+    color: #fff;
 }
 .scrible img {
     width: 200px;
 }
-.zaslikekurac {
+.piccontainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: greenyellow;
+    min-height: 400px;
     padding: 0 35px;
 }
-.form {
-    height: 1000px;
-    width: 100%;
-    background-color: #2b3840ff;
-}
-footer {
-    height: 100px;
-    width: 100%;
-    background-color: #2b3840ff;
-    border-top: 2px solid black;
-}
-.card .img {
-    background: purple;
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
-}
 .card .img img {
-    width: 140px;
-    height: 140px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .wrapper {
     max-width: 1100px;
     width: 100%;
     position: relative;
-  }
-  
-  .wrapper i {
+}
+.wrapper i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -233,81 +215,116 @@ footer {
     cursor: pointer;
     line-height: 50px;
     text-align: center;
-    transition: 0.3s ease;
-  }
-  
-  .wrapper i:first-child {
+}
+.wrapper i:first-child {
     left: -22px;
-  }
-  
-  .wrapper i:last-child {
+}
+.wrapper i:last-child {
     right: -22px;
-  }
-  
-  .wrapper i:active {
+}
+.wrapper i:active {
     transform: translateY(-50%) scale(0.85);
-  }
-  
-  .wrapper .carousel {
+}
+.wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 12px);
     gap: 16px;
-    border-radius: 8px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; 
-  }
-  .wrapper .carousel.no-transition {
+} 
+.wrapper .carousel.no-transition {
     scroll-behavior: auto;
-  }
-  
-  .wrapper .carousel::-webkit-scrollbar {
+} 
+.wrapper .carousel::-webkit-scrollbar {
     display: none;
-  }
-  
-  .wrapper .carousel.dragging {
+}
+.wrapper .carousel.dragging {
     scroll-behavior: auto;
     scroll-snap-type: none;
-  }
-  
-  .wrapper .carousel .card {
+}
+.wrapper .carousel .card {
     scroll-snap-align: start;
     height: 350px;
     background: #fff;
-    border-radius: 8px;
-    padding-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
-  
-  .wrapper .carousel.dragging .card {
+}
+.wrapper .carousel.dragging .card {
     user-select: none;
-    cursor: grabbing;
-  }
-  
-  .wrapper .carousel .card .img {
-    height: 148px;
-    width: 148px;
-    background: #8b53ff;
-    border-radius: 50%;
+    cursor: grab;
+}
+.h3pic {
     display: flex;
-    align-items: center;
     justify-content: center;
-  }
-  
-  .wrapper .carousel .card .img img {
-    height: 140px;
-    width: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #fff;
-  }
-  
+    font-size: 40px;
+    padding-top: 20px;
+}
+.form {
+    background-color: #2b3840ff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.form h4 {
+    margin: 20px;
+    font-size: 30px;
+}
+.formelement {
+    height: 800px;
+    width: 700px;
+    border-radius: 30px;
+    background-color: #fff;
+    margin: 40px;
+}
+.contact-inputs {
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+input, textarea, select {
+    margin: 10px;
+    font-size: 20px;
+}
+textarea {
+    width: 500px;
+    height: 300px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    resize: none;
+}
+.formbutton {
+    margin-top: 25px;
+    padding: 15px 40px;
+    color: #000;
+}
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: #2b3840ff;
+    border-top: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:1248px) {
     .services {
