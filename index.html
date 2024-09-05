@@ -13,65 +13,66 @@
 </head>
 <body>
     <header>
-        <a href="index.html">
-            <img class="logo" src="/icons/slack-brands-solid.svg" alt="logo">
+        <a href="index.html" draggable="false">
+            <img class="logo" src="/icons/slack-brands-solid.svg" alt="logo" draggable="false">
         </a>
         <nav>
             <ul class="nav-links">
-                <li> <a href="#">Početna</a></li>
-                <li> <a href="#">Usluge</a></li>
-                <li> <a href="#">O nama</a></li>  
-                <li> <a href="#">Galerija</a></li> 
+                <li> <a href="#hero" draggable="false">Početna</a></li>
+                <li> <a href="#services" draggable="false">Usluge</a></li>
+                <li> <a href="#about" draggable="false">O nama</a></li>  
+                <li> <a href="#gallery" draggable="false">Galerija</a></li> 
             </ul>
         </nav>
-        <a href="#"><button class="nav-button">Kontakt</button></a>
+        <a href="#contact" draggable="false"><button class="nav-button">Kontakt</button></a>
     </header>
-    <div class="hero">
-        <div>Ime kompanije</div>
+    <div id="hero" class="hero">
         <div class="hero-container">
-            <div>
+            <div class="hero-text">
+                <div>Ime kompanije</div>
                 <p>Kurac kurasdf dfhgkfhg kdhfg<br>kfjd gkjfdgk afsdfsfdsfd<br>asfddfgdhgdfghfghfg fhgffhghfghfgh asfaf</p>
-                <a href="#"><button class="hero-button">Kontakt</button></a>
+                <a href="#contact" draggable="false"><button class="hero-button">Kontakt</button></a>
             </div>
             <div class="illustration">
-                <img class="stuff" src="/icons/Man-with-Gadgets.svg" alt="illustration">
+                <img class="stuff" src="/icons/Man-with-Gadgets.svg" alt="illustration" draggable="false">
             </div>
         </div>
     </div>
-    <div class="container">
+    <div id="services" class="container">
         <div class="text">
             <h2>RHThsr thrrth rhtsrht </h2>
             <p>ryhjstdthshr gdfgjh ghjd fdgjh dhj  djht<br>ffghh srthhsr t shdgfhsg<br>sdbfhsdgf dfhadhfhdgf</p>
         </div>
         <div class="services">
-            <div class="services-card">
+            <div id="1" class="services-card">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h2>Digital Marketing</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur sit eius tempore impedit natus officia aut dicta iusto corporis maiores non dolorum nobis vitae error animi, facilis tempora quisquam!</p>
+            </div>
+            <div id="2" class="services-card">
                 <i class="fas fa-desktop"></i>
                 <h2>Web Design</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur sit eius tempore impedit natus officia aut dicta iusto corporis maiores non dolorum nobis vitae error animi, facilis tempora quisquam!</p>
             </div>
-            <div class="services-card">
+            <div id="3" class="services-card">
                 <i class="fas fa-code"></i>
                 <h2>Web Development</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur sit eius tempore impedit natus officia aut dicta iusto corporis maiores non dolorum nobis vitae error animi, facilis tempora quisquam!</p>
             </div>
-            <div class="services-card">
-                <i class="fas fa-desktop"></i>
+            <div id="4" class="services-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
                 <h2>Computer Service</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae tenetur sit eius tempore impedit natus officia aut dicta iusto corporis maiores non dolorum nobis vitae error animi, facilis tempora quisquam!</p>
             </div>
         </div>
-        <div class="text">
-            <h2>FDGHSshrth HGSfshghgh</h2>
-            <p>dfghjdjjhg gdfgdf dfg<br>ggfdfsg dfgssd fedfgfddgdfgh<br>gasfgdf hsfdgh gsgeastgrete</p>
-        </div>
     </div>
-    <div class="scrible">
+    <div id="about" class="scrible">
         <div>Make it make make sense, ali ako imas daj nekih novaca,<br>ako imas<br>necu ti nikad ovo zaboraviti, uvek sam voleo tebe<br>a ne onog debelog caleta</div>
         <div>
-            <img src="/icons/slack-brands-solid.svg" alt="aaaaa">
+            <img src="/icons/Programming.svg" alt="programming" draggable="false">
         </div>
     </div>
-        <h3 class="h3pic">Dudu pupu pipi kik</h3>
+        <h3 id="gallery" class="h3pic">Galerija</h3>
     <div class="piccontainer">
         <div class="wrapper">
             <i id="left" class="fa-solid fa-angle-left"></i>
@@ -98,7 +99,7 @@
             <i id="right" class="fa-solid fa-angle-right"></i>
         </div>
     </div>
-    <div class="form">
+    <div id="contact" class="form">
         <div class="formelement">
             <form action="">
                 <h4>Kontaktirajte nas</h4>
@@ -107,11 +108,12 @@
                 <input type="email" name="email" placeholder="E-mail" class="contact-inputs" required><br>
                 <select name="type" class="contact-inputs" required>
                     <option value="" disabled selected>Odaberi opciju</option>
-                    <option value="1">1asdasdasd</option>
-                    <option value="2">2asdasdasd</option>
-                    <option value="3">3asdasdasd</option>
+                    <option value="1">Digital Marketing</option>
+                    <option value="2">Web Design</option>
+                    <option value="3">Web Development</option>
+                    <option value="4">Computer Service</option>
                 </select><br>
-                <textarea name="message" placeholder="Dodatne informacije"></textarea><br>
+                <textarea name="message" placeholder="Dodatne informacije..."></textarea><br>
                 <button class="form-button" type="submit">Prosledi</button>
             </form>
         </div>
