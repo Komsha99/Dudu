@@ -1,11 +1,16 @@
 const header = document.querySelector('header');
 const hero = document.querySelector('.hero');
-const links = document.querySelectorAll('.nav-links li a');
+const links = document.querySelectorAll('.nav-links li a, .nav-button');
 
 links.forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
-    const target = this.getAttribute('href');
+    let target;
+    if(this.classList.contains('nav-button')) {
+      target = '#contact';
+    } else {
+      target = this.getAttribute('href');
+    }
     const targetElement = document.querySelector(target);
 
     if (targetElement) {
@@ -66,11 +71,18 @@ $(document).ready(function () {
 		var id = $(this).attr("id");
 		$('.contact-inputs').children('option').each(function (key, option) {
 			if(id == $(option).attr('value')){
-				$(option).attr('selected', 'selected');
+				$(option).prop('selected', true);
 			}
 			else{
-				$(option).removeAttr('selected');
+				$(option).prop('selected', false);
 			}
 		});
+
+    const contactSection = document.querySelector('#contact');
+    if(contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
 	});
 });
