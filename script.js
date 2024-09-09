@@ -39,19 +39,41 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(hero);
 
+
 $(document).ready(function(){
   var $carousel = $('.carousel').slick({
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
     arrows: true,
     draggable: true,
     prevArrow: '#left',
-    nextArrow: '#right'
-  });
+    nextArrow: '#right',
 
+    responsive: [
+      {
+        breakpoint: 1700, 
+        settings: {
+          slidesToShow: 2, 
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000
+        }
+      },
+      {
+        breakpoint: 1100, 
+        settings: {
+          slidesToShow: 1, 
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000
+        }
+      }
+    ]
+  });
+});
 
 $carousel.on('afterChange', function(event, slick, currentSlide){
   $carousel.slick('slickPlay');
@@ -63,7 +85,6 @@ $carousel.on('mousedown', function() {
 
 $carousel.on('mouseup mouseleave', function() {
   $carousel.slick('slickPlay');
-});
 });
 
 $(document).ready(function () {
