@@ -51,7 +51,6 @@ $(document).ready(function(){
     draggable: true,
     prevArrow: '#left',
     nextArrow: '#right',
-
     responsive: [
       {
         breakpoint: 1700, 
@@ -73,37 +72,38 @@ $(document).ready(function(){
       }
     ]
   });
-});
-
-$carousel.on('afterChange', function(event, slick, currentSlide){
-  $carousel.slick('slickPlay');
-});
-
-$carousel.on('mousedown', function() {
-  $carousel.slick('slickPause');
-});
-
-$carousel.on('mouseup mouseleave', function() {
-  $carousel.slick('slickPlay');
-});
-
-$(document).ready(function () {
-	$('body').on('click', '.services-card', function(){
-		var id = $(this).attr("id");
-		$('.contact-inputs').children('option').each(function (key, option) {
-			if(id == $(option).attr('value')){
-				$(option).prop('selected', true);
-			}
-			else{
-				$(option).prop('selected', false);
-			}
-		});
-
-    const contactSection = document.querySelector('#contact');
-    if(contactSection) {
-      contactSection.scrollIntoView({
-        behavior: 'smooth'
+  $carousel.on('afterChange', function(event, slick, currentSlide){
+    $carousel.slick('slickPlay');
+  });
+  
+  $carousel.on('mousedown', function() {
+    $carousel.slick('slickPause');
+  });
+  
+  $carousel.on('mouseup mouseleave', function() {
+    $carousel.slick('slickPlay');
+  });
+  
+  $(document).ready(function () {
+    $('body').on('click', '.services-card', function(){
+      var id = $(this).attr("id");
+      $('.contact-inputs').children('option').each(function (key, option) {
+        if(id == $(option).attr('value')){
+          $(option).prop('selected', true);
+        }
+        else{
+          $(option).prop('selected', false);
+        }
       });
-    }
-	});
+  
+      const contactSection = document.querySelector('#contact');
+      if(contactSection) {
+        contactSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 });
+
+
