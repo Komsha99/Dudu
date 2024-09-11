@@ -471,7 +471,6 @@ p i:hover {
 }
 @media screen and (max-width:992px) {
     .scrible {
-        height: 150px;
         flex-direction: column;
         height: 700px;
         gap: 0;
@@ -503,6 +502,12 @@ p i:hover {
     .footh1 {
         font-size: 10px;
     }
+    .text h2 {
+        font-size: 35px;
+    }
+    .text p {
+        font-size: 17px;
+    }
     .footercontact {
         font-size: 12px;
     }
@@ -522,5 +527,78 @@ p i:hover {
     .services-card {
         width: 350px;
         height: 500px; 
+    }
+    .scribblep {
+        font-size: 16px;
+    }
+    footer {
+        flex-direction: column;
+        height: 100px;
+        gap: 5px;
+    }
+    .scrible {
+        height: 500px;
+    }
+}
+@media screen and (max-width:550px) {
+    .scribblep {
+        width: auto;
+        font-size: 13px;
+    }
+    .contact-inputs {
+        width: 250px;
+    }
+    textarea {
+        width: 250px;
+    }
+    .services-card {
+        width: 280px;
+        height: 400px;
+    }
+    .stuff {
+        width: 250px;
+    }
+    .illustration {
+        width: 250px;
+    }
+    .illustration h2 {
+        font-size: 30px;
+    }
+    .hero-text p {
+        font-size: 20px;
+        width: 100%;
+    }
+    .scrible-img {
+        width: 250px;
+    }
+    #left {
+        display: none;
+    }
+    .wrapper {
+        max-width: 100%;
+    }
+    .card .img img {
+        width: 100%;
+    }
+    .wrapper i {
+        display: none;
+    }
+    .scrible {
+        height: 450px;
+    }
+    .formelement {
+        width: 350px;
+        height: 420px;
+    }
+    textarea {
+        display: none;
+    }
+    .form-button {
+        margin-top: 0;
+    }
+}
+@media screen and (max-width:420px) {
+    .formelement {
+        width: 85vw;
     }
 }
