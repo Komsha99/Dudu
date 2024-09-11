@@ -581,7 +581,7 @@ p i:hover {
         width: 100%;
     }
     .wrapper i {
-        display: none;
+        display: none !important;
     }
     .scrible {
         height: 450px;
