@@ -539,6 +539,9 @@ p i:hover {
     .scrible {
         height: 500px;
     }
+    header {
+        display: none;
+    }
 }
 @media screen and (max-width:550px) {
     .scribblep {
