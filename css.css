@@ -156,21 +156,24 @@ h1 {
 }
 .scrible {
     width: 100%;
-    height: 700px;
+    height: 400px;
     background-color: #25344f;
     display: flex;
     justify-content: center;
-    gap: 50px;
     align-items: center;
     font-size: 30px;
     color: #fff;
 }
 .scribblep {
-    width: 550px;
+    width: 800px;
     text-align: center;
+    font-size: 22px;
 }
 .scribblep p {
-    padding: 5px;
+    line-height: 2;
+}
+.scrible-img {
+    width: 550px;
 }
 .piccontainer {
     display: flex;
@@ -341,16 +344,6 @@ p i:hover {
     .hero p {
         font-size: 35px;
     }
-    .scrible {
-        height: 600px;
-    }
-    .scrible-img {
-        width: 700px;
-    }
-    .scribblep {
-        font-size: 27px;
-        font-weight: 500;
-    }
     .wrapper {
         max-width: 1000px;
     }
@@ -366,18 +359,15 @@ p i:hover {
         margin-left: 10px;
     }
     .scrible {
-        gap: 0;
+        height: 600px;
+        flex-direction: column;
     }
     .services-card {
         width: 210px;
         height: 300px;
     }
-    .scrible {
-        height: 400px;
-        gap: 50px;
-    }
     .scrible-img {
-        width: 350px;
+        width: 450px;
     }
     .form {
         gap: 50px;
@@ -398,9 +388,6 @@ p i:hover {
         width: 400px;
         height: 150px;
     }
-    .scribblep {
-        font-size: 25px;
-    }
     .hero-text p {
         padding-bottom: 0;
     }
@@ -408,7 +395,7 @@ p i:hover {
         font-size: 50px;
     }
     .text p {
-        font-size: 25px;
+        font-size: 22px;
     }
     .stuff {
         width: 400px;
@@ -436,10 +423,8 @@ p i:hover {
     }
 }
 @media screen and (max-width:992px) {
-    .scrible {
-        flex-direction: column;
-        height: 700px;
-        gap: 0;
+    .scribblep {
+        width: 730px;
     }
     .form img {
         width: 150px;
@@ -462,7 +447,7 @@ p i:hover {
     }
     .text h2 {
         font-size: 40px;
-    }
+    }s
     .text p {
         font-size: 20px;
     }
@@ -493,7 +478,7 @@ p i:hover {
         font-size: 32px;
     }
     .text p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .footercontact {
         font-size: 12px;
@@ -520,6 +505,7 @@ p i:hover {
     }
     .scribblep {
         font-size: 16px;
+        width: auto;
     }
     .scrible {
         height: 500px;
@@ -569,7 +555,7 @@ p i:hover {
         display: none !important;
     }
     .scrible {
-        height: 450px;
+        height: 400px;
     }
     .formelement {
         width: 350px;
@@ -580,12 +566,6 @@ p i:hover {
     }
     .form-button {
         margin-top: 0;
-    }
-    .text h2 {
-        font-size: 30px;
-    }
-    .text p {
-        font-size: 12px;
     }
     .footh2 {
         font-size: 12px;
@@ -616,6 +596,9 @@ p i:hover {
         width: 280px;
         height: 400px; 
     }
+    .scribblep {
+        font-size: 12px;
+    }
     footer {
         flex-direction: column;
         gap: 10px;
@@ -625,9 +608,30 @@ p i:hover {
         flex-direction: column;
         height: 450px;
     }
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text h2 {
+        font-size: 22px;
+    }
+    .text p {
+        font-size: 14px;
+        font-weight: 400;
+        width: 300px;
+    }
 }
+
 @media screen and (max-width:420px) {
     .formelement {
         width: 85vw;
+        min-width: 300px;
+    }
+    .scribblep {
+        font-size: 9px;
+    }
+    .scrible {
+        height: 300px;
     }
 }

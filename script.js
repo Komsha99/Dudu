@@ -107,3 +107,10 @@ $(document).ready(function(){
 });
 
 
+if (screen.width <= 319) {
+  const para = document.createElement("p");
+  const node = document.createTextNode("This is new.");
+  para.appendChild(node);
+  const element = document.getElementById("huh");
+  element.appendChild(para);
+}
