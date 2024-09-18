@@ -55,7 +55,8 @@
 }
 #nav-m.close {
     width: auto;
-    height: auto;
+    height: 0;
+    overflow: hidden;
 }
 #nav-m.open {
     background-color: rgb(50, 50, 50, 0.9);
