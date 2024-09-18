@@ -46,7 +46,7 @@
 .burger {
     width: 25px; 
     height: 2px;
-    background-color: white;
+    background-color: #57befa;
     border-radius: 1px;
     margin: 8px 0;
     transition: all 
