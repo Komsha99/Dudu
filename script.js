@@ -40,6 +40,27 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(hero);
 
 
+const menuBtn = document.querySelector('.activate');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.parentNode.classList.add('open');
+    menuBtn.parentNode.classList.remove('close');
+    setTimeout(function(){
+    menuOpen = true;
+    menuBtn.parentNode.classList.remove('close');
+    }, 500);
+    menuBtn.parentNode.classList.remove('close');
+  } else {
+    menuBtn.parentNode.classList.remove('open');
+    setTimeout(function(){
+      menuBtn.parentNode.classList.add('close')
+      menuOpen = false;
+    }, 500);
+  }
+});
+
+
 $(document).ready(function(){
   var $carousel = $('.carousel').slick({
     infinite: true,
@@ -105,12 +126,3 @@ $(document).ready(function(){
     });
   });
 });
-
-
-if (screen.width <= 319) {
-  const para = document.createElement("p");
-  const node = document.createTextNode("This is new.");
-  para.appendChild(node);
-  const element = document.getElementById("huh");
-  element.appendChild(para);
-}

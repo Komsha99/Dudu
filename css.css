@@ -3,6 +3,83 @@
     margin: 0;
     padding: 0;
 }
+.logo-m {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 10;
+    display: none;
+}
+.logo-m .logo{
+    width: 25px;
+}
+#nav-m {
+    position: fixed;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    z-index: 9;
+    padding-top: 60px;
+}
+#nav-m a {
+    display: none;
+}
+#nav-m.open a {
+    display: block;
+}
+#nav-m button {
+    display: none;
+}
+#midburger {
+    transition: all 0.5s ease-in-out;
+}
+.activate {
+    width: fit-content;
+    position: fixed;
+    right: 5px;
+    top: 0;
+}
+.burger {
+    width: 25px; 
+    height: 2px;
+    background-color: white;
+    border-radius: 1px;
+    margin: 8px 0;
+    transition: all 
+    0.5s ease-in-out;
+    display: none;
+}
+#nav-m.close {
+    width: auto;
+    height: auto;
+}
+#nav-m.open {
+    background-color: rgb(50, 50, 50, 0.9);
+    color: rgb(255, 255, 255,1);
+    overflow: scroll;
+}
+#nav-m.open button {
+    display: inline-block;
+}
+#nav-m.open::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+#nav-m.open.close {
+    width: 100%;
+    height: 150vh;
+}
+#nav-m.open p {
+    display: inline-block;
+}
+#nav-m.open #midburger{
+    transform: translateX(5px);
+}
+
 li, a, button {
     font-size: 20px;
     color: #fff;
@@ -423,6 +500,12 @@ p i:hover {
     }
 }
 @media screen and (max-width:992px) {
+    .logo-m {
+        display: block;
+    }
+    .burger {
+        display: block;
+    }
     .scribblep {
         width: 730px;
     }
