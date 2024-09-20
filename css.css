@@ -744,7 +744,6 @@ p i:hover {
         width: 310px;
     }
 }
-
 @media screen and (max-width:420px) {
     .formelement {
         width: 85vw;
@@ -755,5 +754,10 @@ p i:hover {
     }
     .scrible {
         height: 300px;
+    }
+}
+@media screen and (max-height:450px) {
+    #nav-m {
+        gap: 20px;
     }
 }
