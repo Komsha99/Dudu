@@ -55,8 +55,7 @@
 }
 #nav-m.close {
     width: auto;
-    height: 0;
-    overflow: hidden;
+    height: auto;
 }
 #nav-m.open {
     background-color: rgb(50, 50, 50, 0.9);
@@ -229,7 +228,7 @@ h1 {
     margin-bottom: 10px;
 }
 .services-card p {
-    font-size: 10px;
+    font-size: 15px;
     line-height: 1.5;
 }
 .scrible {
@@ -441,8 +440,20 @@ p i:hover {
         flex-direction: column;
     }
     .services-card {
-        width: 210px;
-        height: 300px;
+        width: 266px;
+        height: 380px;
+    }
+    .services-card i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .services-card h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .services-card p {
+        font-size: 14px;
+        line-height: 1.5;
     }
     .scrible-img {
         width: 450px;
@@ -473,7 +484,7 @@ p i:hover {
         font-size: 50px;
     }
     .text p {
-        font-size: 22px;
+        font-size: 20px;
     }
     .stuff {
         width: 400px;
@@ -507,6 +518,25 @@ p i:hover {
     .burger {
         display: block;
     }
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services-card {
+        width: 600px;
+        height: 420px; 
+    }
+    .services-card i {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .services-card h2 {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+    .services-card p {
+        font-size: 18px;
+    }
     .scribblep {
         width: 730px;
     }
@@ -528,12 +558,6 @@ p i:hover {
     }
     .form img {
         display: none;
-    }
-    .text h2 {
-        font-size: 40px;
-    }s
-    .text p {
-        font-size: 20px;
     }
     .stuff {
         width: 350px;
@@ -584,8 +608,17 @@ p i:hover {
         gap: 20px;
     }
     .services-card {
-        width: 140px;
-        height: 200px; 
+        width: 400px;
+        height: 280px; 
+    }
+    .services-card i {
+        font-size: 35px;
+    }
+    .services-card h2 {
+        font-size: 22px;
+    }
+    .services-card p {
+        font-size: 14px;
     }
     .scribblep {
         font-size: 16px;
@@ -670,15 +703,20 @@ p i:hover {
 }
 @media screen and (max-width:479px) {
     .services {
-        flex-direction: column;
-        align-items: center;
-    }
-    .services {
         gap: 30px;
     }
     .services-card {
         width: 280px;
         height: 400px; 
+    }
+    .services-card i {
+        font-size: 25px;
+    }
+    .services-card h2 {
+        font-size: 20px;
+    }
+    .services-card p {
+        font-size: 12px;
     }
     .scribblep {
         font-size: 12px;

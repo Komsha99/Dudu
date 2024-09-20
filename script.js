@@ -1,6 +1,6 @@
 const header = document.querySelector('header');
 const hero = document.querySelector('.hero');
-const links = document.querySelectorAll('#nav-m a, .nav-links li a, .nav-button');
+const links = document.querySelectorAll('.nav-links li a, .nav-button');
 
 links.forEach(link => {
   link.addEventListener('click', function(e) {
@@ -52,23 +52,12 @@ menuBtn.addEventListener('click', () => {
     }, 500);
     menuBtn.parentNode.classList.remove('close');
   } else {
-    closeMenu();
+    menuBtn.parentNode.classList.remove('open');
+    setTimeout(function(){
+      menuBtn.parentNode.classList.add('close')
+      menuOpen = false;
+    }, 500);
   }
-});
-
-function closeMenu() {
-  menuBtn.parentNode.classList.remove('open');
-  setTimeout(function() {
-    menuBtn.parentNode.classList.add('close');
-    menuOpen = false;
-  }, 500);
-}
-
-links.forEach(link => {
-  link.addEventListener('click', function() {
-    console.log('Link clicked!');
-    closeMenu(); 
-  });
 });
 
 
